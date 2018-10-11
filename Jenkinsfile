@@ -1,5 +1,5 @@
 node {
-    def server = Artifactory.newServer url: https://afactory.jfrog.io/afactory, credentialsId: afactory-admin
+    def server = Artifactory.newServer url: 'https://afactory.jfrog.io/afactory', credentialsId: afactory-admin
     def rtMaven = Artifactory.newMavenBuild()
     def buildInfo
 
