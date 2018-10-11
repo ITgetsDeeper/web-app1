@@ -10,6 +10,10 @@ pipeline {
 
 
 stages{
+        stage ('Clone') {
+        git url: 'https://github.com/ITgetsDeeper/web-app1.git'
+	    }
+        
         stage('Build'){
             steps {
                 rtMaven.run pom: 'pom.xml', goals: 'clean install', buildInfo: buildInfo
